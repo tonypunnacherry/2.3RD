@@ -2,154 +2,60 @@
 <html>
 <head>
 <title>The Needs of Immigrants</title>
-<style>
-#vid {border: 1px solid black; width: 640px; height: 360px;}
-.scene { padding: 0 50px; }
-.scene p { font-size: 24px; line-height: 30px; width: 50%; }
-body,
-html {
-  height: 100%;
-  font-size: 16px;
-  font-weight: normal;
-  font-family: 'Roboto', sans-serif;
-  background-color: #f0f0ee;
-  margin: 0px;
-  padding: 0;
-}
-h1 {
-text-align: center;
-}
-nav {
-overflow: hidden;
-position: relative;
-display: block;
-text-align: center;
-}
-nav a {
-text-decoration: none;
-color: #636363;
-}
-nav a.link  {
-display: inline;
-padding: 20px 25px;
-}
-nav a:hover {
-color: #212121;
-text-decoration: underline;
-}
-
-.dropdown {
-overflow: hidden;
-display: inline;
-padding: 20px 25px;
-cursor: pointer;
-}
-
-div b {
-  font-size: 18px;
-  color: white;
-  position: relative;
-  display: block;
-  top: 46%;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-#placeholder1 {
-  height: 100vh;
-  background-color: grey;
-}
-
-#pinContainer {
-  width: 100%;
-  height: 500px;
-  overflow: hidden;
-  position: relative;
-}
-.panel {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-}
-
-#pinMaster {
-  position: relative;
-}
-
-#footer {
-  height: 100px;
-  background-color: black;
-}
-
-.spacer {
-  height: 600px;
-}
-
-.blue {
-  background-color: #3883d8;
-}
-.turqoise {
-  background-color: #38ced7;
-}
-.brown {
-  background-color: #a66f28;
-}
-.bordeaux {
-  background-color: #953543;
-}
-
-.black {
-  background-color: #000000;
-}
-.green {
-  background-color: mediumseagreen;
-}
-
-.image {
-  width: 200px;
-  height: 200px;
-  line-height: 200px;
-  font-size: 60px;
-  position: absolute;
-  right: 50px;
-  bottom: 100px;
-  color: white;
-  text-align: center;
-}
-
-.imageRed {
-  background: red;
-}
-
-.imageGreen {
-  background: green;
-}
-
-.imageBlue {
-  background: navy;
-}
-</style>
+<link href="styles.css" rel="stylesheet">
 </head>
 <body>
 <h1>The Needs of Immigrants</h1>
 <nav>
 <a href='index.html' class="link">Home</a>
 <a href='why.html' class="link">Why?</a>
-<a href='what.html' class="link">What?</a>
+<a href='what.html' class="link"><b>What?</b></a>
 <a href='how.html' class="link">How?</a>
 <a href='end.html' class="link">Conclusion</a>
 </nav>
 <br/>
+<div class="body">
 <h2>Struggles</h2>
 <p>Immigrants are part of the future of America, but face many problems that need to be addressed.</p>
-<ul>
-<li>Protection from discrimination</li>
-<li>Safety and sanctuary</li>
-<li>Basic human rights</li>
-<li>Security and family</li>
-<li>Social and lingual integration</li>
-</ul>
+<button class="accordion">Protection from discrimination</button>
+<div class="drop">
+  <p>Blocking immigration is not going to stop drugs from crossing the border. We can still help immigrants and stop drugs at the same time.</p>
+</div>
+<button class="accordion">Safety and sanctuary</button>
+<div class="drop">
+  <p>It is our responsibility to help our new potential citizens to get on the right foot. We should help all homeless including immigrant and non-immigrant. Instead, our backwards laws are forcing immigrants to become homeless.</p>
+</div>
+<button class="accordion">Basic human rights</button>
+<div class="drop">
+  <p>Bringing multilingual education to public schools is critical. English and American values should be taught to all immigrants.</p>
+</div>
+<button class="accordion">Security and family</button>
+<div class="drop">
+  <p>Bringing multilingual education to public schools is critical. English and American values should be taught to all immigrants.</p>
+</div>
+<button class="accordion">Social and lingual integration</button>
+<div class="drop">
+  <p>Bringing multilingual education to public schools is critical. English and American values should be taught to all immigrants.</p>
+</div>
+<br/><br/><br/>
 <h2>Tennessee Laws</h2>
 <p>HB2312 and HB2315 are extreme anti-immigrant laws passed by Tenneessee legislature in 2023. These laws should be modified to be less harsh on immigrants.</p>
+</div>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+acc[i].addEventListener("click", function() {
+this.classList.toggle("active");
+var panel = this.nextElementSibling;
+if (panel.style.maxHeight) {
+  panel.style.maxHeight = null;
+} else {
+  panel.style.maxHeight = panel.scrollHeight + "px";
+}
+});
+}
+</script>
 </body>
 </html>
